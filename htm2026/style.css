@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #2F4F4F;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 16px;
+}
+
+.container{
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.subtitle{
+    color: #C4E0E0;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-input{
+    display: none;
+}
+
+.tab-buttons{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tab-btn{
+    flex: 1;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 0;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+#tab1:checked ~ .tab-buttons label[for="tab1"],
+#tab2:checked ~ .tab-buttons label[for="tab2"],
+#tab3:checked ~ .tab-buttons label[for="tab3"] {
+    background: white;
+    color: #2F4F4F;
+    border-color: white;
+}
+
+.tab-content{
+    margin-top: 20px;
+}
+
+.panel{
+    display: none;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+    color: white;
+}
+
+#tab1:checked ~ .tab-content #panel1,
+#tab2:checked ~ .tab-content #panel2,
+#tab3:checked ~ .tab-content #panel3 {
+    display: block;
+}
+
+.panel h2{
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+.panel p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.panel ul{
+    list-style: none;
+    padding: 0;
+}
+
+.panel li{
+    margin: 10px 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+	.footer{
+		margin-top: 30px;
+		padding-top: 20px;
+		text-align: center;
+		border-top: 1px solid rgba(255,255,255,0.2);
+		color: rgba(255,255,255,0.7);
+		font-size: 12px;
+}
+@media (orientation: landscape) and (max-height: 600px){
+    body{
+        padding: 12px;
+        align-items: flex-start;
+    }
+    
+    .container{
+        max-width: 100%;
+    }
+    
+    h1{
+        font-size: 20px;
+    }
+    
+    .subtitle{
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .avatar{
+        width: 70px;
+        height: 70px;
+        margin-bottom: 12px;
+    }
+    
+    .tab-buttons{
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .tab-btn{
+        padding: 6px 0;
+        font-size: 12px;
+    }
+    
+    .tab-content{
+        margin-top: 12px;
+    }
+    
+    .panel{
+        padding: 12px 16px;
+    }
+    
+    .panel h2{
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .panel p, .panel li
+    {
+        font-size: 12px;
+        margin: 6px 0;
+    }
+    
+    .panel li{
+        padding: 6px 10px;
+    }
+     .footer{
+        margin-top: 15px;
+        padding-top: 10px;
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .container{
+        max-width: 550px;
+    }
+    
+    h1{
+        font-size: 32px;
+    }
+    
+    .subtitle{
+        font-size: 18px;
+    }
+    
+    .avatar{
+        width: 140px;
+        height: 140px;
+    }
+    
+    .tab-btn{
+        padding: 12px 0;
+        font-size: 16px;
+    }
+    
+    .panel h2{
+        font-size: 22px;
+    }
+    
+    .panel p .panel li{
+        font-size: 16px;
+    }
+    
+    .panel{
+        padding: 24px;
+    }
+     .footer{
+        margin-top: 40px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1025px){
+    .container {
+        max-width: 650px;
+    }
+    
+    h1{
+        font-size: 38px;
+    }
+    
+    .subtitle{
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    
+    .avatar{
+        width: 160px;
+        height: 160px;
+        margin-bottom: 28px;
+    }
+    
+    .tab-buttons{
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+    
+    .tab-btn{
+        padding: 14px 0;
+        font-size: 18px;
+    }
+    
+    .panel{
+        padding: 28px;
+    }
+    
+    .panel h2{
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    
+    .panel p, .panel li{
+        font-size: 18px;
+    }
+    
+    .panel li{
+        padding: 14px 18px;
+        margin: 14px 0;
+    }
+    .footer{
+		  margin-top: 50px;
+		  font-size: 14px;
+    }
+}
