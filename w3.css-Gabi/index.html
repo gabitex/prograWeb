@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BioGTL</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body{
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0b3b2f 0%, #1a4d5e 40%, #0a2f3a 100%);
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+   .profile-container{
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+    .profile-photo{
+      max-width: 180px;
+      width: 70%
+      border-radius: 36px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      display: block;
+      margin: 1rem auto;
+      transition: transform 0.2s ease;
+      border: 2px solid rgba(255, 215, 120, 0.6);
+    }
+    .profile-photo:hover{
+      transform: scale(1.02);
+    }
+    .nav-btn{
+      background: rgba(30, 55, 45, 0.75);
+      backdrop-filter: blur(4px);
+      color: #ffecb3;
+      border-radius: 60px;
+      padding: 8px 22px;
+      margin: 0 6px;
+      transition: all 0.2s;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .nav-btn:hover{
+      background: #ffcd7e;
+      color: #1e3b2f;
+      transform: translateY(-2px);
+    }
+    .section{
+      background: rgba(10, 30, 25, 0.65);
+      backdrop-filter: blur(6px);
+      border-radius: 32px;
+      padding: 1.6rem;
+      margin-top: 1.8rem;
+      text-align: left;
+      color: #f5f2e0;
+      font-size: 1rem;
+      display: none;
+    }
+    .section:target{
+      display: block;
+    }
+    .section:first-of-type{
+      display: block;
+    }
+    .section h3{
+      color: #ffdf9c;
+      font-weight: 600;
+      margin-top: 0;
+      border-left: 4px solid #ffcd7e;
+      padding-left: 1rem;
+    }
+    .section ul{
+      padding-left: 1.2rem;
+    }
+    .section li{
+      margin: 0.6rem 0;
+    }
+    .footer{
+      margin-top: 2rem;
+      padding: 1rem 0.5rem;
+      font-size: 0.9rem;
+      color: #d4e0d4;
+      border-top: 1px solid rgba(255, 205, 126, 0.3);
+      letter-spacing: 1px;
+    }
+     @media (max-width: 550px){
+      .profile-photo{
+        max-width: 140px;
+      }
+      .nav-btn{
+        padding: 6px 14px;
+        margin: 0 3px;
+        font-size: 0.9rem;
+      }
+      .section{
+        padding: 1rem;
+      }
+      h1{
+        font-size: 1.8rem !important;
+      }
+      .footer{
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body class="w3-monospace">
+
+<div class="profile-container w3-center">
+  <h1 class="w3-xxlarge w3-text-white w3-border w3-border-yellow w3-padding w3-round-large" 
+      style="font-weight: 600; display: inline-block; text-shadow: 0 2px 8px rgba(0,0,0,0.4); margin-bottom: 0.25rem; background: rgba(0,0,0,0.2); backdrop-filter: blur(2px);">
+    Gabriela Ticona Lima
+  </h1>
+  <img class="profile-photo" 
+       src="https://i.postimg.cc/V6P0FGtZ/Whats-App-Image-2026-03-24-at-00-14-11.jpg" 
+       alt="Gabriela Ticona Lima">
+  <p class="w3-xlarge w3-text-amber" style="font-weight: 500; margin-top: 0.5rem; text-shadow: 1px 1px 2px #00000060;">
+    Estudiante de Inigeneria Informatica
+  </p>
+  <div class="w3-bar w3-margin-top" style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+    <a href="#sobreMi" class="nav-btn">Sobre mí</a>
+    <a href="#logros" class="nav-btn">Logros</a>
+    <a href="#contacto" class="nav-btn">Contacto</a>
+  </div>
+
+  <div id="sobreMi" class="section">
+    <h3>✨ Sobre mí</h3>
+    <p>Soy Gabriela, estudiante de Ingeniería Informática, me encanta aprender y crear soluciones. Me encanta rehacer porque así aprendo más.
+        Actualmente estoy cursando 6to semestre, estoy muy animada y lista para nuevos desafíos.</p>
+  </div>
+
+  <div id="logros" class="section">
+    <h3>🏆 Logros</h3>
+    <ul>
+      <li>✅Sistema de Gestion para un carro de comida</li>
+      <li>✅Desarrollo de personajes 3d en Blender</li>
+      <li>✅Manejo del sistema Delta ingresos/costos</li>
+    </ul>
+  </div>
+
+  <div id="contacto" class="section">
+    <h3>📫 Contacto</h3>
+    <p><strong>Email:</strong> gabrielaticonalima1@gmail.com</p>
+    <p><strong>LinkedIn:</strong> linkedin.com/in/gabrielaticona</p>
+    <p><strong>GitHub:</strong>https://github.com/gabitex</p>
+  </div>
+
+  <div class="footer">
+    Cochabamba-Bolivia 2026
+  </div>
+</div>
+
+</body>
+</html>
